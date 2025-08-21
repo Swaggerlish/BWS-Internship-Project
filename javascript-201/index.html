@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascrip 201</title>
+</head>
+<body>
+    <h1>Add EventListener Practice using PokeAPI</h1>
+    <p id="effect"></p>
+    <p id="language"></p>
+    <p id="url"></p>
+    <button id="myButton">GENERATE</button>
+
+
+
+    <script>
+       
+        
+       
+       document.getElementById("myButton").addEventListener("click", function(){
+        num = Math.floor( Math.random() * 140) + 1;
+        console.log(num)
+        url = `https://pokeapi.co/api/v2/ability/${num}/`
+        fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            // console.log(data)
+    
+            document.getElementById("effect").innerText = data["effect_entries"][0]["effect"];
+            document.getElementById("language").innerText = data["effect_entries"][0]["language"]["name"];
+           document.getElementById("url").innerText = data["effect_entries"][0]["language"]["url"];
+            
+            
+        })
+
+        });
+    
+        
+       
+    </script>
+</body>
+</html>

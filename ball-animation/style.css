@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.wrapper{
+    width: 70rem;
+    aspect-ratio: 1;
+    background-image: url("bg-image.jpg");
+    position: relative;
+    background-size:  70rem auto;
+    border: 1rem solid red;
+    animation: bgAnim 5s infinite linear;
+}
+@keyframes bgAnim {
+    0%{
+        background-position: center 0;
+    }
+    100%{
+        background-position: center 70rem;
+    }
+}
+.block{
+    width: 18rem;
+    aspect-ratio: 1;
+    background-color: rgb(51, 184, 184);
+    position: absolute;
+}
+.block-1{
+    top: 16rem;
+    right: 44rem;
+    animation: block1Anim 5s infinite forwards;
+    transform-origin: bottom right;
+    overflow: hidden;
+    box-shadow: 0.2rem 0.2rem 0.4rem #aaa inset, -0.2rem -0.2rem 0.4rem #aaa inset;
+}
+@keyframes block1Anim{
+    0%{
+        transform: translateY(-38rem) rotateZ(0);
+        opacity: 0.5;
+    }
+        30%{
+            transform: translateY(0) rotateZ(0);
+        }
+        40%, 45%{
+            transform: translateY(0) rotateZ(-180deg);
+            opacity: 1;
+        
+        }
+        55%, 100%{
+            transform: translateY(38rem) rotateZ(-180deg);
+            opacity: 0.5;
+        }
+    }
+    
+.block-2{
+    top: 16rem;
+    right: 8rem;
+    transform-origin: bottom left;
+    animation: block2Anim 5s -2.5s infinite forwards;
+}
+@keyframes block2Anim{
+    0%{
+        transform: translateY(-38rem) rotateZ(0);
+        opacity: 0.5;
+    }
+        30%{
+            transform: translateY(0) rotateZ(0);
+        }
+        40%, 45%{
+            transform: translateY(0) rotateZ(180deg);
+            opacity: 1;
+        
+        }
+        55%, 100%{
+            transform: translateY(38rem) rotateZ(180deg);
+            opacity: 0.5;
+        }
+    }
+.ball{
+    width: 12rem;
+    aspect-ratio: 1;
+    top: 22rem;
+    left: 29rem;
+    background-color: rgb(255, 118, 118);
+    position: absolute;
+    border-radius: 50%;
+    animation: ballAnim 2.5s 0.9s infinite linear;
+
+}
+@keyframes ballAnim{
+    0%{
+        transform: translateY(-20rem) scale(0.8, 1);
+    }
+    45%{
+        transform: translateY(0) scale(0.9, 1);
+    }
+    50%{
+        transform: translateY(2rem) scaleY(1, 0.7);
+    }
+    60%{
+        transform: translateY(-10rem) scale(0.9, 1);
+    }
+    100%{
+        transform: translateY(20rem) scale(0.8, 1);
+    }
+}

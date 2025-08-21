@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+{% load thumbnail %}
+{% block title  %}{% endblock %}
+{% block content %}
+<a href="{% url 'feed:post' %}"> New Post &rarr;</a>
+{% for post in posts %}
+<a href="{% url 'feed:detail' post.id %}">
+<h1>{{post.text}}</h1>
+{% thumbnail post.image "100x100" crop="center" as im %}
+    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+{% endthumbnail %}
+</a>
+<hr>
+
+{% endfor %}
+
+
+{% endblock %}

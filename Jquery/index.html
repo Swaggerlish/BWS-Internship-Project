@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+</head>
+<body>
+    <div>
+        <h1></h1>
+        <img class="image" src="" alt="This is an image">
+        <button>Next</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(
+            function(){
+                $("button").on("click", function(){
+                   let num = Math.floor(Math.random()*87) +1;
+                   $.get(`https://akabab.github.io/starwars-api/api/id/${num}.json`, function(data){
+                    $("h1").text(data["name"]);
+                    $("img").attr("src", data["image"]);
+                    $(".image").css({
+                        width: "300px",
+                        height: "300px",
+                        borderRadius: "50%"
+                    })
+                   })
+                })
+
+            //  $("h1").text("I am Happy")
+            }
+        )
+       
+    </script>
+</body>
+</html>

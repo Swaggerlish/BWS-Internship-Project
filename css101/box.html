@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<style>
+    div{
+        border: 1px solid red;
+        height: 200px;
+        width: 200px;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 50%;
+        position: relative;
+        animation: slideme 3.2s 1 alternate;
+    }
+    @keyframes slideme {
+        0% {
+            top: 0;
+            left: 0;
+        }
+        25% {
+            top: 0;
+            left: 100%;
+        }
+        50%{ 
+            top: 100%;
+            left: 100%;
+        } 
+        75%{
+            left: 0;
+            top: 100%;
+        }
+        100%{
+           top: 0;
+            left: 0; 
+        }
+
+    }
+</style>
+<body>
+    <div></div>
+</body>
+</html>

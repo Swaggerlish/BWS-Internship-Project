@@ -1,0 +1,30 @@
+table{
+    width: 100%;
+}
+
+th.rocket{
+    font-size: 140%;
+}
+div.rocket{
+    background-color: black;
+    background-image: url("spacex.jpg");
+    color: white;
+    height: 600px;
+    font-weight: bolder;
+    background-size: cover;
+}
+div.rocket h1{
+display: inline-block;
+width: 40%;
+padding-top: 100px;
+padding-left: 100px;
+font-size: 50px;
+}
+div.rocket p{
+    padding-left: 100px;
+    font-size: 50px;
+}
+button{
+    margin-left: 100px;
+    font-size: 30px;
+}
