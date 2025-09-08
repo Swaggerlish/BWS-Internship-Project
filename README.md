@@ -1,4 +1,5 @@
 # BWS-Internship-Project
+<img width="3368" height="2380" alt="Image" src="https://github.com/user-attachments/assets/4c9dd91d-e7cc-4e44-8752-27f2a2a45bb3" />
 the list of the projects executed during the six-month internship at Business Web Solution USA 
 # Main Topics Covered
 * HTML
